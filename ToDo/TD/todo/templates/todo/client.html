@@ -1,0 +1,58 @@
+{% extends 'todo/main.html' %}
+
+
+{% block content %}
+<style>
+.alert { 
+	color: beige;
+	border-color: beige;
+}
+</style>
+
+<div class="row">
+	<div class="col-md">
+		<div class="alert">
+			<h5>Client:</h5>
+			<!-- <h1 style="text-align: center;padding: -10px">{{ client.name }}</h1> -->
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Client</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Client</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="alert">
+			<h5>Contact Information</h5>
+			<hr>
+			<p>Email: {{ client.email }} </p>
+			<p>Phone: {{ client.phone }} </p>
+			<p>Date created: {{ client.date_created }} </p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="alert">
+			<h5>Number of todo</h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px">{{ total_todos }}</h1>
+		</div>
+	</div>
+</div>
+
+
+<!-- <br>
+<div class="row">
+	<div class="col">
+		<div class="alert">
+			<form method="get">
+		    <button class="btn btn-danger" type="submit">Search</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br> -->
+
+{% endblock content %}
+
